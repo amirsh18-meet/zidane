@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<scriptsrc="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<scriptsrc="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+	<title>Zinedine Zidane </title>
+	
+<style type="text/css">
+
+
+
+ div.blue{
+ 	background-color: blue;
+ }
+
+</style>
+</head>
+<body background="static/images/zi.jpg">
+
+
+ <p>  <h1 style="color:red;  font-size:48px; text-align: center;"> <em> <u> Zinedine Zidane </u> </em> </h1> </p> 
+
+<div id="container">
+<ul>
+	
+	<li>Career
+		<ul>
+			<li> <a href="{{url_for('cannes')}}">Cannes</a> </li>
+			<li> <a href="{{url_for('bordeaux')}}">Bordeaux</a></li>
+			<li><a href="{{url_for('juventus')}}">Juventus</a></li>
+			<li> <a href="{{url_for('realmadrid')}}">Real Madrid</a></li>
+			<li> <a href="{{url_for('france')}}">France</a></li>
+		</ul>
+	</li>
+	
+</ul>
+</div>
+
+<br><br><br>
+<form method='post' action="{{ url_for('comment') }}">
+	<input type="text" name="comment">
+	<input type="submit" name="post">
+
+</form>
+<div class="blue" >
+{% for comment in all_comments %}
+<div class="border">
+{{ comment.text }} <br>
+</div>
+{% endfor %}
+</div>
+<p >
+
+
+	Zinedine Zidane is a French football player from Algerian parents who imigrrated to France before the Algerian war. He was born on 23 June,1972 in Marseille as the youngest between five siblings. His father worked as a warehouseman and nightwatchman at a department store, often on the night shift, while his mother was a housewife, the family lived a reasonably comfortable life by the standards of the neighbourhood, which was notorious throughout Marseille for its high crime and unemployment rates.
+	It was in Castellane where Zidane had his earliest introduction in football, joining in at the age of five in football games that the neighbourhood's children played on the Place Tartane, an 80-by-12-yard plaza that served as the main square of the housing complex.
+	At the age of ten, Zidane got his first player's licence after joining the junior team of a local club from Castellane by the name of US Saint-Henri. After spending a year and a half at US Saint-Henri, Zidane joined SO Septèmes-les-Vallons when the Septèmes coach Robert Centenero convinced the club's Director to get Zidane. Zidane stayed with Septèmes until the age of 14, at which time he was selected to attend a three-day training camp at the CREPS (Regional Centre for Sports and Physical Education) in Aix-en-Provence, one of several such footballing institutes run by the French Football Federation. It was here that Zidane was spotted by AS Cannes scout and former player Jean Varraud, who recommended him to the training centre director of the club.
+	In July 2011, Zidane named former Marseille players Blaž Slišković, Enzo Francescoli and Jean-Pierre Papin as his idols while growing up.
+
+</p><br>
+
+
+
+
+</body>
+</html>
